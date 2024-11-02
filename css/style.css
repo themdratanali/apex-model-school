@@ -1,0 +1,626 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Noto+Serif+Bengali:wght@300;400;600;700&display=swap');
+
+/* Global Styles */
+body {
+    font-family: 'Noto Serif Bengali', serif; /* Set default font */
+    background: url('img/bg.png') no-repeat center center fixed; /* Fixed background image */
+    background-size: cover; /* Ensure the background covers the entire area */
+}
+
+/* Main website container */
+.main-website {
+    width: 90%; /* Set width of main container */
+    margin: 0 auto; /* Center the container */
+    padding: 0 2px; /* Add horizontal padding */
+    background-color: white; /* White background for content area */
+}
+
+/* Container for images */
+.container img {
+    width: 100%; /* Make images responsive */
+}
+
+/* Menu styles */
+.menu {
+    width: 100%; /* Full width */
+    background: #008606; /* Menu background color */
+    border-bottom: 2px solid #d20016; /* Border at the bottom */
+    height: 45px; /* Fixed height */
+    text-align: left; /* Center text */
+    position: relative; /* Positioning context for dropdown */
+}
+
+/* Menu list styles */
+.menu ul {
+    width: 100%; /* Full width for the menu */
+    margin-left: -28px; /* Adjust alignment */
+}
+
+.menu ul li {
+    display: inline-block; /* Horizontal list items */
+    border-left: 1px solid #fcfcfc; /* Left border */
+    border-right: 1px solid #fff; /* Right border */
+    padding: 10px 20px; /* Padding around menu items */
+    margin-left: -5px; /* Adjust spacing */
+}
+
+/* Link styles within menu */
+.menu ul li a {
+    color: #fff; /* White text color */
+    text-decoration: none; /* No underline */
+    font-size: 18px; /* Font size */
+}
+
+.menu ul li a:first-child {
+    border-left: 0; /* Remove left border for the first item */
+}
+
+/* Hover effect for menu items */
+.menu ul li:hover {
+    background: #01cb0b; /* Change background on hover */
+}
+
+/* Dropdown menu styles */
+.menu ul li ul {
+    width: 146px; /* Dropdown width */
+    position: absolute; /* Positioning for dropdown */
+    top: 41px; /* Position below the menu */
+    left: 27px; /* Position to the left */
+    background: #008606; /* Dropdown background color */
+    padding: 0; /* Remove padding */
+    text-align: center; /* Center text in dropdown */
+    border-top: 2px solid #fff; /* Top border */
+    z-index: 5; /* Ensure dropdown appears above other content */
+    visibility: hidden; /* Hide dropdown initially */
+    opacity: 0; /* Set opacity for transition */
+    transition: .3s; /* Transition effect for visibility */
+    transform: scaleY(0); /* Initial scale for dropdown */
+    transform-origin: top; /* Transform origin */
+}
+
+/* Dropdown item styles */
+.menu ul li ul li {
+    border-left: none; /* No left border for dropdown items */
+    border-bottom: 1px solid #fff; /* Bottom border */
+    display: block; /* Stack dropdown items */
+    margin-left: 0; /* Reset margin */
+}
+
+/* Show dropdown on parent hover */
+.menu ul li:hover ul {
+    visibility: visible; /* Show dropdown */
+    opacity: 1; /* Set opacity to fully visible */
+    transform: scaleY(1); /* Scale to original size */
+}
+
+/* Notice section background */
+.notice-bg {
+    background: linear-gradient(-90deg, rgb(105, 225, 62), rgb(29, 36, 23)); /* Gradient background */
+    color: #fff; /* White text color */
+    text-align: left; /* Align text left */
+    padding: 5px 10px; /* Padding */
+    margin-right: 0; /* Reset margin */
+    height: 34px; /* Fixed height */
+}
+
+/* Additional background color classes */
+.bg-red {
+    background: linear-gradient(-90deg, #fd783f, #9a0000); /* Red gradient */
+}
+
+.bg-sky {
+    background: linear-gradient(-90deg, #85deff, #00a8d7); /* Sky blue gradient */
+}
+
+/* Notice title styles */
+.notice-title {
+    font-size: 18px; /* Font size */
+}
+
+/* NFS (Not Found Section) width */
+.nfs {
+    width: 10%; /* Width for NFS */
+    float: left; /* Float left */
+}
+
+/* Scrollbox styles */
+.scroll-box {
+    background-color: rgb(235, 235, 235); /* Light grey background */
+    height: 35px; /* Fixed height */
+    width: 90%; /* Width */
+    float: left; /* Float left */
+    overflow: hidden; /* Hide overflow */
+}
+
+.scroll-box ul {
+    transform: translateX(100%); /* Start off screen */
+    animation: moving 20s linear infinite; /* Animation for scrolling */
+}
+
+.scroll-box ul li {
+    display: inline-block; /* Horizontal list items */
+    padding: 5px; /* Padding */
+}
+
+/* Link styles in scrollbox */
+.scroll-box ul a {
+    text-decoration: none; /* No underline */
+    color: #333; /* Dark text color */
+    font-size: 16px; /* Font size */
+}
+
+.scroll-box ul a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Keyframes for scrolling animation */
+@keyframes moving {
+    0% {
+        transform: translateX(100%); /* Start off screen right */
+    }
+    100% {
+        transform: translateX(-100%); /* Move off screen left */
+    }
+}
+
+/* Clear floats */
+.clear {
+    clear: both; /* Clear floats */
+    margin-top: 45px; /* Margin top */
+}
+
+/* Notice image styles */
+.notice-img {
+    width: 45% !important; /* Set width */
+    float: left; /* Float left */
+    margin-top: 12px; /* Margin */
+    margin-right: 15px; /* Margin */
+}
+
+/* Notice text styles */
+.notice-text {
+    width: 100%; /* Full width */
+    margin-top: 12px; /* Margin */
+    font-size: 16px; /* Font size */
+    line-height: 22px; /* Line height */
+    letter-spacing: 1px; /* Letter spacing */
+    text-align: justify; /* Justify text */
+}
+
+/* Left and right float classes */
+.left-50 {
+    float: left; /* Float left */
+    width: 48%; /* Set width */
+    margin-top: 30px; /* Margin */
+}
+
+.right-50 {
+    float: right; /* Float right */
+    width: 48%; /* Set width */
+    margin-top: 30px; /* Margin */
+}
+
+/* Notice content styles */
+.notice-content {
+    background: #f3f3f3; /* Light grey background */
+    padding-top: 10px; /* Padding */
+    padding-bottom: 10px; /* Padding */
+    overflow: hidden; /* Hide overflow */
+}
+
+/* Scrolling notice styles */
+.scroll-notice {
+    transform: translateY(100%); /* Start off screen */
+    animation: movingUp 15s linear infinite; /* Animation for scrolling */
+}
+
+.notice-content ul li {
+    padding: 6px; /* Padding */
+    display: block; /* Stack items */
+    margin-left: -13px; /* Adjust margin */
+}
+
+/* Link styles in notice content */
+.notice-content ul li a {
+    font-size: 13px; /* Font size */
+    text-decoration: none; /* No underline */
+    color: #333; /* Dark text color */
+}
+
+/* Hover effect for notice links */
+.notice-content ul li:hover a {
+    color: #2f90fe; /* Change color on hover */
+}
+
+/* Keyframes for scrolling up animation */
+@keyframes movingUp {
+    0% {
+        transform: translateY(100%); /* Start off screen bottom */
+    }
+    100% {
+        transform: translateY(-100%); /* Move off screen top */
+    }
+}
+
+/* Info box styles */
+.info-box {
+    width: 100%; /* Full width */
+    padding: 10px 20px; /* Padding */
+    border: 2px solid #cdc8c8; /* Border */
+    background-color: #fff; /* White background */
+    height: 180px; /* Fixed height */
+    border-top: 0; /* No top border */
+}
+
+/* Image styles in info box */
+.info-box img {
+    width: 100px; /* Fixed width */
+    float: left; /* Float left */
+}
+
+/* Navigation styles within info box */
+.info-box nav ul {
+    float: left; /* Float left */
+}
+
+.info-box nav ul li {
+    display: block; /* Stack items */
+    padding: 2px; /* Padding */
+}
+
+/* Link styles within info box navigation */
+.info-box nav ul li a {
+    text-decoration: none; /* No underline */
+    color: #333; /* Dark text color */
+    font-size: 13px; /* Font size */
+    padding-left: 2px; /* Padding */
+}
+
+/* Hover effect for links in info box navigation */
+.info-box nav ul li a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Margin for info section */
+.info {
+    margin-bottom: 31px; /* Bottom margin */
+}
+
+/* Styles for red notice section */
+.notice-red ul li {
+    display: block; /* Stack items */
+    padding: 6px 10px; /* Padding */
+    background: linear-gradient(-90deg, #DE182C, #C71528); /* Gradient background */
+    margin-top: 6px; /* Margin */
+    margin-left: -30px; /* Adjust margin */
+}
+
+.notice-red ul i {
+    color: white; /* Icon color */
+}
+
+.notice-red ul a {
+    text-decoration: none; /* No underline */
+    font-size: 13px; /* Font size */
+    color: white; /* White text color */
+    padding-left: 2px; /* Padding */
+}
+
+/* Hover effect for red notice items */
+.notice-red ul li:hover {
+    background: linear-gradient(-90deg, #f7c318, #C71528); /* Change background on hover */
+    cursor: pointer; /* Pointer cursor */
+}
+
+/* Footer styles */
+section#footer {
+    background: rgb(23, 122, 3); /* Footer background color */
+    padding: 10px 30px; /* Padding */
+    color: #fff; /* White text color */
+}
+
+/* Copyright text styles */
+.copyright-text {
+    font-size: 17px; /* Font size */
+}
+
+/* Developer text styles */
+.dev-text {
+    text-align: right; /* Align text to the right */
+    font-size: 15px; /* Font size */
+}
+
+.dev-text a {
+    text-decoration: none; /* No underline */
+    color: #fff; /* White text color */
+    margin-left: 3px; /* Margin */
+}
+
+.dev-text a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Header styles */
+.header {
+    background: linear-gradient(180deg, rgb(29, 36, 23), rgb(105, 225, 62)); /* Gradient background */
+    width: 100%; /* Full width */
+    height: 176px; /* Fixed height */
+    padding: 20px 10px; /* Padding */
+}
+
+/* Header text styles */
+.header-text {
+    margin-top: 15px; /* Margin */
+}
+
+/* Logo image styles */
+.logo-img {
+    width: 130px !important; /* Logo width */
+    background-color: white; /* Background for logo */
+    border-radius: 60%; /* Circular logo */
+    float: left; /* Float left */
+    margin-top: 5px; /* Margin */
+    margin-left: 50px; /* Margin */
+}
+
+.logo-img2 {
+    width: 130px !important; /* Second logo width */
+    float: right; /* Float right */
+    margin-right: 50px; /* Margin */
+    margin-top: 5px; /* Margin */
+}
+
+/* Header title styles */
+.header-text h2 {
+    font-size: 40px; /* Font size */
+    font-weight: 700; /* Bold font weight */
+    color: #fff; /* White text color */
+    text-align: center; /* Center align */
+}
+
+/* Header subtitle styles */
+.header-text h4 {
+    font-size: 20px; /* Font size */
+    color: #fff; /* White text color */
+    letter-spacing: 2px; /* Letter spacing */
+    text-align: center; /* Center align */
+}
+
+/* Member box styles */
+.member-box {
+    width: 250px; /* Fixed width */
+    height: 294px; /* Fixed height */
+    border: 2px solid #d7d7d7; /* Border color */
+    text-align: center; /* Center text */
+    padding: 10px 15px; /* Padding */
+    background: white; /* White background */
+    border-radius: 5px; /* Rounded corners */
+    margin-top: 30px; /* Margin */
+    display: inline-block; /* Inline block for alignment */
+    margin-left: 30px; /* Margin */
+}
+
+/* Member image styles */
+.member-box img {
+    width: 100%; /* Full width */
+    height: 200px; /* Fixed height */
+    margin-bottom: 10px; /* Margin */
+}
+
+/* Page title styles */
+.page-title {
+    text-align: center; /* Center align */
+    margin-top: 16px; /* Margin */
+    border-bottom: 4px double gray; /* Bottom border */
+}
+
+/* Content area styles */
+.content-area.col-lg-12 {
+    min-height: 350px; /* Minimum height */
+}
+
+/* Slider styles */
+.slick-dotted.slick-slider {
+    clear: both; /* Clear floats */
+}
+
+.slider {
+    max-height: 450px; /* Maximum height */
+    margin-bottom: 20px; /* Margin */
+    overflow: hidden; /* Hide overflow */
+}
+
+/* Media Queries for Responsive Design */
+
+/* General mobile styles */
+@media only screen and (max-width: 991px) {
+    .logo-img {
+        width: 60px !important; /* Adjust logo size for mobile */
+        float: right; /* Float right */
+        margin: 20px 10px 0; /* Margin */
+    }
+
+    .logo-img2 {
+        width: 60px !important; /* Adjust second logo size for mobile */
+        float: left; /* Float left */
+        margin: 20px 10px 0; /* Margin */
+    }
+
+    .header-text h2 {
+        font-size: 20px !important; /* Smaller font size for header */
+        margin-top: 35px; /* Margin */
+    }
+
+    .header-text h4 {
+        font-size: 10px !important; /* Smaller font size for subtitle */
+    }
+}
+
+/* Styles for screens 200px to 990px */
+@media only screen and (min-width: 200px) and (max-width: 990px) {
+
+    /* Menu styles */
+    .menu {
+        width: 100%; /* Full width */
+        background: #008606; /* Menu background color */
+        border-bottom: 1px solid #d20016; /* Border at the bottom */
+        height: 60px; /* Fixed height */
+        text-align: center; /* Center text */
+        position: relative; /* Positioning context for dropdown */
+    }
+
+    /* Menu list styles */
+    .menu ul {
+        width: 100%; /* Full width for the menu */
+    }
+
+    .menu ul li {
+        display: inline-block; /* Horizontal list items */
+        border-left: 0px solid #fcfcfc; /* Left border */
+        border-right: 0px solid #fff; /* Right border */
+        padding: 3px 5px; /* Padding around menu items */
+        margin-left: 0px; /* Adjust spacing */
+    }
+
+    /* Link styles within menu */
+    .menu ul li a {
+        color: #fff; /* White text color */
+        text-decoration: none; /* No underline */
+        font-size: 13px; /* Font size */
+        text-align: center; /* Center text */
+    }
+
+    /* Dropdown menu styles */
+    .menu ul li ul {
+        width: 140px; /* Dropdown width */
+        position: absolute; /* Positioning for dropdown */
+        top: 41px; /* Position below the menu */
+        left: 27px; /* Position to the left */
+        background: #008606; /* Dropdown background color */
+        padding: 0; /* Remove padding */
+        text-align: center; /* Center text in dropdown */
+        z-index: 5; /* Ensure dropdown appears above other content */
+        visibility: hidden; /* Hide dropdown initially */
+        opacity: 0; /* Set opacity for transition */
+        transition: .3s; /* Transition effect for visibility */
+        transform: scaleY(0); /* Initial scale for dropdown */
+        transform-origin: top; /* Transform origin */
+    }
+
+    /* Dropdown item styles */
+    .menu ul li ul li {
+        border-left: none; /* No left border for dropdown items */
+        display: block; /* Stack dropdown items */
+        margin-left: 0; /* Reset margin */
+    }
+
+    /* Show dropdown on parent hover */
+    .menu ul li:hover ul {
+        visibility: visible; /* Show dropdown */
+        opacity: 1; /* Set opacity to fully visible */
+        transform: scaleY(1); /* Scale to original size */
+    }
+        
+    .notice-text {
+        font-size: 13px; /* Smaller font size */
+    }
+
+    .clear {
+        margin-top: 35px; /* Adjust margin */
+    }
+
+    .notice-content ul li a {
+        font-size: 11px; /* Smaller font size for links */
+    }
+
+    .info-box img {
+        width: 42px; /* Smaller image size in info box */
+    }
+
+    .info-box nav ul {
+        width: 79%; /* Adjust width for navigation */
+    }
+
+    .info-box nav ul li a {
+        font-size: 11px; /* Smaller font size for nav links */
+    }
+
+    .copyright-text {
+        font-size: 14px; /* Smaller font size for copyright */
+    }
+
+    .dev-text {
+        font-size: 12px; /* Smaller font size for developer text */
+    }
+
+    .header {
+        padding: 21px 15px; /* Adjust padding */
+    }
+
+    .logo-img {
+        width: 100px !important; /* Adjust logo size */
+        margin-top: -70px; /* Adjust position */
+    }
+
+    .header-text h2 {
+        font-size: 29px; /* Smaller font size for header */
+    }
+
+    .member-box {
+        width: 42%; /* Adjust member box width */
+    }
+}
+
+/* Additional mobile styles for screens 200px to 770px */
+@media only screen and (min-width: 200px) and (max-width: 770px) {
+    .nfs {
+        width: 20%; /* Adjust NFS width */
+    }
+
+    .scroll-box {
+        width: 80%; /* Adjust scrollbox width */
+    }
+
+    .left-50,
+    .right-50 {
+        width: 100%; /* Full width for both sections */
+    }
+
+    .right-50 {
+        margin-top: 5px; /* Margin adjustment */
+    }
+
+    .info-box img {
+        width: 55px; /* Smaller image size in info box */
+    }
+
+    .info-box nav ul li a {
+        font-size: 14px; /* Smaller font size for nav links */
+    }
+
+    .header {
+        height: 105px; /* Adjust height for header */
+        padding: 5px 0; /* Adjust padding */
+        text-align: center; /* Center text */
+    }
+
+    .logo-img {
+        width: 58px !important; /* Smaller logo size */
+        margin-top: 0; /* Reset margin */
+    }
+
+    .header-text h2 {
+        font-size: 19px; /* Smaller font size for header */
+        letter-spacing: 1px; /* Letter spacing */
+    }
+
+    .header-text h4 {
+        font-size: 17px; /* Smaller font size for subtitle */
+        letter-spacing: 1px; /* Letter spacing */
+    }
+
+    .member-box {
+        width: 82%; /* Adjust member box width */
+    }
+}
